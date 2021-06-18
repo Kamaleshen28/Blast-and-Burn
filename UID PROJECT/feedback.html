@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <script>
+                    function validate()
+                    {
+                        if(document.myform.firstname.value=="")
+                        alert("U have left first name as blank");
+            if(document.myform.lastname.value=="")
+                        alert("U have left last name as blank");
+            if(document.myform.description.value=="")
+                        alert("U have left description as blank");
+             var emailID = document.myform.email.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         if (atpos < 1 || ( (dotpos - atpos) < 2 )) {
+            alert("Please enter correct email ID")
+             }
+
+                    }
+           </script>
+    </head>
+    <body>
+        <div style="margin-left: 450px;float: left;">       
+           <form name="myform"> 
+            <h1>Feed back form</h1>
+            We would love to hear your thoughts, concerns or problems with<br> anything so we can improve!
+            <hr>
+            <b>feedback type:</b><br>
+            <input type="radio" checked>Comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio">Bug report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio">Question<br><br>
+            <b> Describe Feedback:</b><span style="color: red;">*</span><br><br>
+            <textarea name="description" rows="5" cols="40"></textarea><br><br>
+            <b> Name:</b><span style="color: red;">*</span><br>
+            <input type="text" name="firstname">
+            <input type="text" name="lastname"><br>
+            <div style="font-weight: lighter;">
+            Firstname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last Name</div><br><br>
+            <b>E-mail</b><span style="color: red;">*</span><br>
+            <input type="email" name="email"><br><br>
+            <input type="submit" onclick="validate()">
+            </form>
+            <br><a href="mailto:blastandburn@gmail.com">contact us</a>
+        </div> 
+    </body>
+</html>
